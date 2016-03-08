@@ -1,23 +1,20 @@
 var React = require("react")
-var transparentBg = require("../styles/index").transparentBg
 var ReactRouter = require("react-router")
 var Link = ReactRouter.Link
+var MainContainer = require("./MainContainer")
 
 var Home = React.createClass({
   render: function() {
     return (
-      <div>
-        <div className="jumbotron col-sm-12 text-center"
-             style={transparentBg}>
-          <h1>Github Battle</h1>
-          <p className="lead">Learning React Fundamentals Again</p>
-          <Link to="/playerOne">
-            <button type="button" className="btn btn-lg btn-success">
-              Get Started
-            </button>
-          </Link>
-        </div>
-      </div>
+      <MainContainer>
+        <h1>Github Battle</h1>
+        <p className="lead">Learning React Fundamentals Again</p>
+        <Link to="/playerOne">
+          <button type="button" className="btn btn-lg btn-success">
+            Get Started
+          </button>
+        </Link>
+      </MainContainer>
     )
   }
 })
